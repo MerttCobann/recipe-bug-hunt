@@ -8,3 +8,27 @@ Tips: Use parchment paper
 Storage: Keep in airtight container"Notes: Best served warm" 
 "Notes: Best served warm" 
 "Texture: Soft and chewy" 
+ Reflection Questions – Recipe Bug Hunt
+
+1. How many times did you have to check the temperature before Git found the bug?
+I had to check a few times, around 3 times, before Git told me which commit was bad.
+Each time I looked at the “Temperature” line and wrote either git bisect good or git bisect bad.
+
+2. If you had 100 commits instead of 7, about how many checks would bisect need?
+It would only need around 7 checks, because bisect uses something like a shortcut called binary search.
+So it doesn’t have to go through every single commit.
+
+3. How is bisect different from manually checking each commit with git checkout?
+If I check commits one by one, it takes a lot of time.
+With git bisect, Git automatically jumps to the middle of the commits and helps me find the bad one much faster.
+So it saves a lot of time and effort.
+
+4. When would git bisect be most useful in real projects?
+It’s most useful when a project has a lot of commits and suddenly something breaks,
+but you don’t know which commit caused it.
+Bisect helps you find that bad commit quickly without checking them all.
+
+5. What information do you need to start a bisect session?
+You need to know one “good” commit where everything worked fine
+and one “bad” commit where the bug exists.
+Then Git can compare them and find the problem in between.
